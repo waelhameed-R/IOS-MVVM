@@ -56,9 +56,9 @@ extension BaseApiRequest{
         var request = URLRequest(url: url)
         
         // MARK:- ADD HEADER TOKEN
-        if let token = UIApplication.getToken() {
-            request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
-        }
+//        if let token = UIApplication.getToken() {
+//            request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
+//        }
 
         let lng = UserDefaults.standard.value(forKey: "local") as? String ?? ""
         request.setValue(lng, forHTTPHeaderField: "x-localization")
